@@ -1,0 +1,803 @@
+/* CSS styles for Turku Event Hub */
+:root {
+  --light-body: #f3f8fe;
+  --light-main: #fdfdfd;
+  --light-second: #c3c2c8;
+  --light-hover: #edf0f5;
+  --light-text: #151426;
+
+  --red: #e74c3c;
+  --black: #000;
+  --img-color: #ededed;
+  --overlay: rgba(0, 0, 0, 0.75);
+
+  --orange: #ffcf54;
+  --white: #fff;
+
+  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  --font-family: italic;
+}
+
+.light {
+  --bg-body: var(--light-body);
+  --bg-main: var(--light-main);
+  --bg-second: var(--light-second);
+  --color-hover: var(--light-hover);
+  --color-txt: var(--light-text);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Google font for Judson */
+.judson-regular {
+  font-family: "Judson", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.judson-bold {
+  font-family: "Judson", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.judson-regular-italic {
+  font-family: "Judson", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Font colour */
+main {
+  color: #442900 !important;
+  font-family: "Judson", serif;
+}
+
+#header {
+  background-color: #ffcf54;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-cont {
+  padding: 15px;
+}
+
+.nav-icons:hover path {
+  stroke: var(--orange);
+  transition-duration: 0.3s;
+}
+
+.btn-light {
+  color: #442900;
+  background-color: white;
+}
+
+.middle_navbar {
+  background-color: #ffcf54;
+}
+
+.middle_navbar div nav ul li button {
+  width: 10rem;
+}
+
+ul {
+  padding-left: 5px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.active_event,
+.event-type:hover,
+.load-btn:hover {
+  background-color: #eeeff3;
+  border-color: #eeeff3;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+#event-grid {
+  color: #442900;
+}
+
+.events {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 26rem;
+}
+
+.card {
+  width: 22rem;
+  height: 375px;
+  text-decoration: none;
+  color: #442900;
+  margin: 1rem;
+  position: relative;
+  top: 35px;
+}
+
+/* Cards styles */
+.card-link:link {
+  text-decoration: none;
+  color: #442900;
+}
+
+.card-link:visited {
+  text-decoration: none;
+  color: #442900;
+}
+
+.card-link:active {
+  text-decoration: none;
+  color: #442900;
+}
+
+.card img {
+  object-fit: cover;
+  height: 15rem;
+}
+
+.card-body h2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 80wv;
+}
+
+.load-btn {
+  border-color: #eeeff3;
+}
+
+/* Subscribe section */
+.subscribe {
+  background: #eeeff3;
+  height: 448px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.subscribe-side {
+  flex-grow: 1;
+  position: relative;
+}
+
+.sub-bg {
+  position: absolute;
+  left: 13vw;
+  top: -6vw;
+  width: 61%;
+}
+
+.sub-form {
+  text-align: center;
+  position: relative;
+}
+
+.input-group {
+  min-width: 100px;
+  max-width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  height: 49px;
+}
+
+.input-group input {
+  border-radius: 60px;
+  border-color: #442900;
+  color: #442900;
+}
+
+.input-group button {
+  border-radius: 60px;
+  border-color: #442900;
+  background-color: #442900;
+  color: #fff;
+}
+
+.sub-form h2 {
+  margin-bottom: 2rem;
+}
+
+/* Subscribe Right Section */
+
+.contact-side {
+  flex-grow: 2;
+  position: relative;
+}
+
+.contact-bg {
+  position: absolute;
+  right: 6rem;
+  top: -8rem;
+  width: 70%;
+}
+
+.contact-items {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-items div {
+  margin-left: 2rem;
+}
+
+.contact-item {
+  margin-bottom: 1.2rem;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #442900;
+  font-size: 22px;
+}
+
+.contact-link:hover {
+  color: rgb(233, 211, 19);
+}
+
+/* Footer */
+footer {
+  background-color: #ffcf54;
+}
+
+.footer-text {
+  margin-bottom: 0;
+  color: var(--light-text);
+}
+
+.social-media {
+  margin: 10px 0 10px 0;
+  justify-content: center;
+}
+
+.social-media a {
+  margin: 0 10px 0 10px;
+}
+
+/* Hero */
+
+.hero {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 3rem;
+}
+
+@media (max-width: 1100px) {
+  .calendar {
+    margin-bottom: 3rem;
+  }
+}
+
+/* Caledar */
+
+.calendar {
+  background-color: var(--bg-main);
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  width: 30rem;
+}
+
+.light .calendar {
+  box-shadow: var(--shadow);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--color-txt);
+  padding: 10px;
+}
+
+.calendar-body {
+  padding: 10px;
+}
+
+.calendar-week-day {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: 600;
+  height: 50px;
+}
+
+.calendar-week-day div {
+  display: grid;
+  place-items: center;
+  color: var(--bg-second);
+}
+
+.calendar-day {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  color: var(--color-txt);
+}
+
+.calendar-day div {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  cursor: pointer;
+  animation: to-top 1s forwards;
+}
+
+.calendar-day .disable {
+  pointer-events: none;
+  background-color: #eeeff3;
+}
+
+.calendar-day .disable:hover {
+  color: inherit;
+}
+
+.calendar-day div:hover {
+  color: var(--orange);
+}
+
+.month-picker {
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.month-picker:hover {
+  background-color: var(--color-hover);
+}
+
+.calendar-footer {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.calendar-day div.currDate {
+  background-color: var(--orange);
+  color: var(--white);
+  border-radius: 50%;
+}
+
+.month-list {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--bg-main);
+  padding: 20px;
+  color: var(--color-txt);
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 5px;
+  transform: scale(1.5);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.month-list.show {
+  transform: scale(1);
+  visibility: visible;
+  pointer-events: visible;
+  transition: all 0.2s ease-in-out;
+}
+
+.month-list > div {
+  display: grid;
+  place-items: center;
+}
+
+.month-list > div > div {
+  width: 100%;
+  padding: 5px 20px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.month-list > div > div:hover {
+  background-color: var(--color-hover);
+}
+
+@keyframes to-top {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Carusel */
+
+.carusel {
+  width: 30rem;
+  position: relative;
+  height: 496px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  margin: auto;
+}
+
+/* Hide the images by default */
+.slide {
+  display: none;
+  margin: 0 auto;
+}
+
+.slide-image img {
+  position: absolute;
+  /* height: 496px;
+  width: 30rem; */
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(58, 56, 56, 0.86);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 3px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  svg path {
+    fill: var(--orange);
+  }
+}
+
+/* Caption text */
+.slide-info {
+  color: #f2f2f2;
+  font-size: 24px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dots {
+  position: absolute;
+  bottom: 0;
+  padding-left: 43%;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  /* transition: background-color 0.6s ease; */
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.faded {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Event page: event image with info card on the left */
+.event-img-bg {
+  /* background-image: url(../assets/dune_2.png); */
+  background-color: #eeeff3;
+  background-size: cover;
+  background-position: center;
+  height: 445px;
+}
+
+.event-card-img {
+  height: 75px;
+  width: 75px;
+  margin: 20px 0px 0px 0px;
+}
+
+.list-group-item {
+  text-decoration: none;
+  color: #442900;
+}
+
+.schedule-bg {
+  background: #eeeff3;
+}
+
+.cinema-margins {
+  margin: 0vw 0vw 0vw 3vw;
+}
+
+.btn-light-2 {
+  border-color: #442900;
+  background-color: #fff;
+  width: 8vw;
+}
+
+.btn-light-2:hover {
+  border-color: #442900;
+  color: #442900;
+  background-color: rgba(215, 208, 208, 0.3);
+  transition-property: background-color;
+}
+
+.btn-light-2:focus {
+  border-color: #442900;
+  color: #442900;
+  background-color: rgba(215, 208, 208, 0.3);
+  transition-property: background-color;
+}
+
+.btn-light-2:active {
+  border-color: #442900;
+  color: #442900;
+  background-color: #fff;
+  transition-property: background-color;
+}
+
+.item-style {
+  color: #442900;
+  background-color: #fff;
+  width: 5vw;
+  height: 50px;
+  text-align: center;
+  font-size: 22px;
+  padding: 8px;
+  margin: vw; /* need to play with it */
+}
+
+.item-style:hover {
+  color: #442900;
+  background-color: rgba(255, 255, 255, 0.75);
+  transition-property: background-color;
+}
+
+.line-style {
+  width: 90%;
+  border: 2px solid white;
+  opacity: 100%;
+}
+
+.dropdown-item {
+  color: #442900;
+}
+
+.dropdown-item:active {
+  color: #442900;
+  background-color: rgba(215, 208, 208, 0.3);
+}
+
+.schedule-bg a {
+  text-decoration: none;
+  color: #442900;
+}
+
+.time-group {
+  display: flex;
+}
+
+.time-group p {
+  border-radius: 5rem;
+  margin-left: 2rem;
+  background-color: #ffffff;
+  padding: 0.5rem 1.5rem;
+}
+
+.navbar-brand:hover g {
+  fill: var(--light-hover);
+  transition-duration: 0.3s;
+}
+
+.social-media-link:hover path {
+  fill: var(--light-hover);
+  transition-duration: 0.3s;
+}
+
+/* Registration */
+
+.registration,
+.login {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Account */
+.account-container {
+  min-height: 30rem;
+}
+
+.account-nav {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.account-nav-heading {
+  color: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  color: #222224;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.account-header {
+  text-align: center;
+  font-weight: normal;
+  color: var(--orange);
+  margin: 30px;
+}
+.account-info {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.account-form label {
+  display: inline-block;
+  width: 145px;
+}
+
+.account-form-info {
+  min-width: 300px;
+  box-sizing: border-box;
+  border: 1px solid #a4a4a4;
+  padding: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  outline: none;
+  transition-duration: 0.2s;
+}
+
+/* MOBILE */
+
+@media (max-width: 1200px) {
+  .contact-bg {
+    right: 2rem;
+    top: -7rem;
+    width: 85%;
+  }
+}
+
+@media (max-width: 992px) {
+  .subscribe {
+    overflow-y: hidden;
+    overflow-y: hidden;
+  }
+  .nav-cont {
+    flex-wrap: wrap;
+  }
+
+  .list-group-item {
+    margin-bottom: 10px;
+  }
+
+  .contact-bg {
+    right: -4rem;
+    width: 120%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-bg {
+    display: none;
+  }
+
+  .subscribe {
+    flex-direction: column;
+  }
+
+  .sub-bg {
+    left: 13vw;
+    top: 0vw;
+    width: 80%;
+  }
+
+  .sub-form {
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .calendar-day div {
+    width: 30px;
+    height: 30px;
+  }
+
+  .footer-text {
+    display: none;
+  }
+
+  .time-group {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 365px) {
+  .calendar-day div {
+    width: 23px;
+    height: 23px;
+  }
+}
