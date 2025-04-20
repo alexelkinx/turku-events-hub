@@ -60,6 +60,6 @@ To set up the project locally, follow these steps:
 
 ## Usage
 
-- Visit [Turku Events Hub](https://turku.events) to explore events.
+- Visit [Turku Events Hub](https://turkuevents.online) to explore events.
 - Use the search and filter options to find specific events.
 - Stay updated on upcoming activities in Turku.
