@@ -3,7 +3,7 @@
 Turku Events Hub is a web-based platform that helps users discover and explore events happening in Turku, Finland. The project aims to provide an easy-to-use interface for finding local events and activities.
 
 <p align="center">
-  <a href="https://turku.events">
+  <a href="https://turkuevents.online">
     <img src="https://img.shields.io/badge/Visit-Website-blue" alt="Visit Website" width="150">
   </a>
 </p>
