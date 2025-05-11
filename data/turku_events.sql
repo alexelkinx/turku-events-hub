@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Хост: localhost:8889
--- Время создания: Апр 18 2024 г., 03:32
--- Версия сервера: 5.7.39
--- Версия PHP: 8.2.0
+-- Host: localhost:8889
+-- Created: Apr 18, 2024 at 03:32
+-- Server version: 5.7.39
+-- PHP version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `events`
+-- Database: `turku_events`
 --
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `concert`
+-- Table structure for table `concert`
 --
 
 CREATE TABLE `concert` (
@@ -39,7 +39,7 @@ CREATE TABLE `concert` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Дамп данных таблицы `concert`
+-- Dumping data for table `concert`
 --
 
 INSERT INTO `concert` (`id`, `title`, `description`, `genre`, `views`, `image`, `location`, `event_type`) VALUES
@@ -54,7 +54,7 @@ INSERT INTO `concert` (`id`, `title`, `description`, `genre`, `views`, `image`, 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `event_date`
+-- Table structure for table `event_date`
 --
 
 CREATE TABLE `event_date` (
@@ -64,7 +64,7 @@ CREATE TABLE `event_date` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Дамп данных таблицы `event_date`
+-- Dumping data for table `event_date`
 --
 
 INSERT INTO `event_date` (`id`, `event_id`, `date`) VALUES
@@ -145,7 +145,7 @@ INSERT INTO `event_date` (`id`, `event_id`, `date`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `event_time`
+-- Table structure for table `event_time`
 --
 
 CREATE TABLE `event_time` (
@@ -156,7 +156,7 @@ CREATE TABLE `event_time` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Дамп данных таблицы `event_time`
+-- Dumping data for table `event_time`
 --
 
 INSERT INTO `event_time` (`id`, `date_id`, `time`, `url`) VALUES
@@ -252,7 +252,7 @@ INSERT INTO `event_time` (`id`, `date_id`, `time`, `url`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `favourite`
+-- Table structure for table `favourite`
 --
 
 CREATE TABLE `favourite` (
@@ -264,7 +264,7 @@ CREATE TABLE `favourite` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `movie`
+-- Table structure for table `movie`
 --
 
 CREATE TABLE `movie` (
@@ -283,7 +283,7 @@ CREATE TABLE `movie` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Дамп данных таблицы `movie`
+-- Dumping data for table `movie`
 --
 
 INSERT INTO `movie` (`id`, `title`, `description`, `director`, `duration`, `cast`, `genre`, `views`, `image`, `event_type`, `url`, `location`) VALUES
@@ -296,7 +296,7 @@ INSERT INTO `movie` (`id`, `title`, `description`, `director`, `duration`, `cast
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `sport`
+-- Table structure for table `sport`
 --
 
 CREATE TABLE `sport` (
@@ -311,7 +311,7 @@ CREATE TABLE `sport` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Дамп данных таблицы `sport`
+-- Dumping data for table `sport`
 --
 
 INSERT INTO `sport` (`id`, `title`, `description`, `type`, `views`, `image`, `location`, `event_type`) VALUES
@@ -324,7 +324,7 @@ INSERT INTO `sport` (`id`, `title`, `description`, `type`, `views`, `image`, `lo
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `theatre`
+-- Table structure for table `theatre`
 --
 
 CREATE TABLE `theatre` (
@@ -342,7 +342,7 @@ CREATE TABLE `theatre` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Дамп данных таблицы `theatre`
+-- Dumping data for table `theatre`
 --
 
 INSERT INTO `theatre` (`id`, `title`, `description`, `director`, `duration`, `cast`, `genre`, `views`, `image`, `location`, `event_type`) VALUES
@@ -360,7 +360,7 @@ INSERT INTO `theatre` (`id`, `title`, `description`, `director`, `duration`, `ca
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -371,76 +371,76 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Индексы сохранённых таблиц
+-- Indexes of saved tables
 --
 
 --
--- Индексы таблицы `concert`
+-- Indexes for table `concert`
 --
 ALTER TABLE `concert`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `event_date`
+-- Indexes for table `event_date`
 --
 ALTER TABLE `event_date`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `event_time`
+-- Indexes for table `event_time`
 --
 ALTER TABLE `event_time`
   ADD PRIMARY KEY (`id`),
   ADD KEY `date_id` (`date_id`);
 
 --
--- Индексы таблицы `favourite`
+-- Indexes for table `favourite`
 --
 ALTER TABLE `favourite`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `movie`
+-- Indexes for table `movie`
 --
 ALTER TABLE `movie`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `sport`
+-- Indexes for table `sport`
 --
 ALTER TABLE `sport`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `theatre`
+-- Indexes for table `theatre`
 --
 ALTER TABLE `theatre`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`user_email`);
 
 --
--- AUTO_INCREMENT для сохранённых таблиц
+-- AUTO_INCREMENT value for table of saved tables
 --
 
 --
--- AUTO_INCREMENT для таблицы `event_date`
+-- AUTO_INCREMENT value for table `event_date`
 --
 ALTER TABLE `event_date`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
 
 --
--- AUTO_INCREMENT для таблицы `event_time`
+-- AUTO_INCREMENT value for table `event_time`
 --
 ALTER TABLE `event_time`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 
 --
--- AUTO_INCREMENT для таблицы `favourite`
+-- AUTO_INCREMENT value for table `favourite`
 --
 ALTER TABLE `favourite`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
