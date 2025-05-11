@@ -1,2 +1,10 @@
+# Environment variable files
+.env
+.env.local
+
+# System files and editor settings
 .DS_Store
+.vscode/
+
+# PHP dependencies
 vendor/
