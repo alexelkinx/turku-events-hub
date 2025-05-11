@@ -43,9 +43,7 @@
 
 The platform follows a modular structure with clear separation between backend logic and frontend presentation. The backend uses an MVC-style pattern with organized actions, entities, HTTP layers, and repositories.
 
-<p align="center">
-  <img src="assets/architecture_diagram.png" alt="Architecture Diagram">
-</p>
+![Architecture](assets/architecture_diagram.png)
 
 ## Project Structure
 
